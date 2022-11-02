@@ -24,6 +24,10 @@ app.use(express.json());
 //middleware for cookie parsing
 app.use(cookieParser());
 
+/*--Routes--*/
+//회원가입 라우터
+app.use("/new", require("./routes/register"));
+
 /*--Error Handling--*/
 //custom 404
 app.use(function (req, res, next) {
