@@ -30,7 +30,7 @@ const userSchema = new Schema({
     },
     Editor: Number,
     Admin: Number,
-    enum: ["User", "Editor", "Admin"],
+    //enum: ["User", "Editor", "Admin"],
   },
 
   refreshToken: {
