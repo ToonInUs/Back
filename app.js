@@ -30,6 +30,7 @@ app.use("/new", require("./routes/register"));
 
 //로그인 라우터
 app.use("/login", require("./routes/login"));
+app.use("/logout", require("./routes/logout"));
 
 /*--Error Handling--*/
 //custom 404
