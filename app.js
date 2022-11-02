@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const morgan = require("morgan");
+const cookieParser = require("cookie-parser");
 const errorHandler = require("./middleware/errorHandler");
 const mongoose = require("mongoose");
 const connectDB = require("./config/connectDB");
@@ -19,6 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 
 //built-in middleware for JSON
 app.use(express.json());
+
+//middleware for cookie parsing
+app.use(cookieParser());
 
 /*--Error Handling--*/
 //custom 404
