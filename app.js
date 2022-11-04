@@ -28,9 +28,12 @@ app.use(cookieParser());
 //회원가입 라우터
 app.use("/new", require("./routes/register"));
 
-//로그인 라우터
+//로그인, 로그아웃 라우터
 app.use("/login", require("./routes/login"));
 app.use("/logout", require("./routes/logout"));
+
+//Token 재발급
+app.use("/refresh", require("./routes/refresh"));
 
 /*--Error Handling--*/
 //custom 404
