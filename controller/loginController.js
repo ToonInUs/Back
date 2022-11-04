@@ -1,7 +1,6 @@
 const User = require("../model/User");
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const {createJWT} = require("../controller/createJWT")
+const { createJWT } = require("../controller/createJWT");
 const handleLogin = async (req, res) => {
   const { mail, pwd } = req.body;
   if (!mail || !pwd) {
@@ -20,7 +19,7 @@ const handleLogin = async (req, res) => {
   //Evaluate password
   const comparePwd = await bcrypt.compare(pwd, foundUser.password);
   if (comparePwd) {
-    createJWT(res,foundUser);
+    createJWT(res, foundUser);
   } else {
     //Unauthorized: wrong password
     res.status(401).json({ message: "Wrong password." });
