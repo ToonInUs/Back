@@ -35,6 +35,8 @@ app.use("/logout", require("./routes/logout"));
 //Token 재발급
 app.use("/refresh", require("./routes/refresh"));
 
+app.use("/users", require("./routes/users"));
+
 /*--Error Handling--*/
 //custom 404
 app.use(function (req, res, next) {
