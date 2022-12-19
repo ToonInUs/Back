@@ -8,25 +8,28 @@ const registerController = require("../controller/registerController");
 router.post("/", registerController.handleNewUser);
 
 //이메일 중복 확인
-router.get("/dupmail", async (req, res) => {
-  const mail = req.body.mail;
+router.get("/mail/:mail", async (req, res) => {
+  const mail = req.params.mail;
   const duplicate = await User.findOne({ email: mail }).exec();
   if (duplicate) {
-    return res.status(409).json({ message: `Email ${mail} is already exist.` }); //Conflict
+    return res
+      .status(409)
+      .json({ message: `Email: ${mail} is already exist.` }); //Conflict
   }
-  return res.status(200).json({ success: true });
+  return res.status(200).json({ message: `You can use ${mail}.` });
 });
 
 //닉네임 중복 확인
-router.get("/dupname", async (req, res) => {
-  const name = req.body.name;
+router.get("/name/:name", async (req, res) => {
+  const name = req.params.name;
+  console.log(name);
   const duplicate = await User.findOne({ username: name }).exec();
   if (duplicate) {
     return res
       .status(409)
-      .json({ message: `Username ${name} is already exist.` }); //Conflict
+      .json({ message: `Username: ${name} is already exist.` }); //Conflict
   }
-  return res.status(200).json({ success: true });
+  return res.status(200).json({ message: `You can use ${name}.` });
 });
 
 module.exports = router;
