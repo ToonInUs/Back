@@ -37,6 +37,10 @@ app.use("/refresh", require("./routes/refresh"));
 
 app.use("/users", require("./routes/users"));
 
+app.get("/", (req, res) => {
+  res.send("ToonInUs");
+});
+
 /*--Error Handling--*/
 //custom 404
 app.use(function (req, res, next) {
