@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser");
 const errorHandler = require("./middleware/errorHandler");
 const mongoose = require("mongoose");
 const connectDB = require("./config/connectDB");
+const corsOptions = require("./config/corsOptions");
 const PORT = process.env.PORT || 3000;
 
 dotenv.config(); //process.env
@@ -14,6 +15,9 @@ dotenv.config(); //process.env
 connectDB(); //MongoDB Connection
 
 app.use(morgan("dev"));
+
+//for Cross-Origin Resource Sharing
+app.use(cors(corsOptions));
 
 //built-in middleware to handle urlencoded from data
 app.use(express.urlencoded({ extended: true }));
