@@ -10,8 +10,11 @@
 
       "tasteTags": ["tag1", "tag2"],
       "tagedWebtoons": [
-        { "63843e0686f6b3b5c9f14377": ["tag1", "tag2"] },
-        { "63832497c73d88db060679d1": ["tag1"] }
+        {
+          "webtoon_taged": "63843e0686f6b3b5c9f14377",
+          "tags": ["tag1", "tag2"]
+        },
+        { "webtoon_taged": "63832497c73d88db060679d1", "tags": ["tag1"] }
       ],
       "likedWebtoons": ["63843edf86f6b3b5c9f143f8"],
       "likedComments": ["comment1", "comment2"],
@@ -33,7 +36,9 @@
       "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0ZXZlMSIsImlhdCI6MTY2NjMyMDg5MywiZXhwIjoxNjY2NDA3MjkzfQ.ItnQJnYZOjPuOli7A62GDvv6RggiBBTc6I1u6b-T5TE",
 
       "tasteTags": ["tag3", "tag2"],
-      "tagedWebtoons": [{ "63843edf86f6b3b5c9f143f8": ["tag3"] }],
+      "tagedWebtoons": [
+        { "webtoon_taged": "63843edf86f6b3b5c9f143f8", "tags": ["tag3"] }
+      ],
       "likedWebtoons": ["63843e8486f6b3b5c9f143c3", "63843e0686f6b3b5c9f14377"],
       "likedComments": ["comment2"],
       "myComments": ["comment2"]
@@ -48,7 +53,9 @@
       "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzYxNTA3ZmQ3NTkwNmRkNjgwYzE2YTQiLCJpYXQiOjE2NjczMjE5ODMsImV4cCI6MTY2NzQwODM4M30.bdtiNSk21T5Im85OfFBuTpf2jQVvjio9ANVAXs1qkoY",
 
       "tasteTags": ["tag1", "tag2", "tag3"],
-      "tagedWebtoons": [{ "63843e8486f6b3b5c9f143c3": ["tag2"] }],
+      "tagedWebtoons": [
+        { "webtoon_taged": "63843e8486f6b3b5c9f143c3", "tags": ["tag2"] }
+      ],
       "likedWebtoons": [
         "63832497c73d88db060679d1",
         "63843c56adb390991d9e4769",
