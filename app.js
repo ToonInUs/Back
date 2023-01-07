@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser");
 const errorHandler = require("./middleware/errorHandler");
 const mongoose = require("mongoose");
 const connectDB = require("./config/connectDB");
+const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
 const PORT = process.env.PORT || 3000;
 
