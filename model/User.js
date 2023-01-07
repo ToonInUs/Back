@@ -50,7 +50,7 @@ const userSchema = new Schema({
       type: Array,
     },
   ],
-
+  //merge test
   //{Object Id (ref Comments) }]
   myComments: {
     type: mongoose.Schema.Type.ObjectId,
